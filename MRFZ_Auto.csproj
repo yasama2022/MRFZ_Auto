@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{61441BC1-4B9A-4E2E-9D62-C27A904A79D6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MRFZ_Auto</RootNamespace>
+    <AssemblyName>MRFZ_Auto</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MRFZ_Auto.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>铃兰-_1_.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="lib\adb.cs" />
+    <Compile Include="lib\image\CIE2000.cs" />
+    <Compile Include="lib\image\FontGray.cs" />
+    <Compile Include="lib\image\ImageColor.cs" />
+    <Compile Include="lib\image\NumberModel.cs" />
+    <Compile Include="lib\image\sRGB.cs" />
+    <Compile Include="lib\KeyEvent.cs" />
+    <Compile Include="lib\RECT.cs" />
+    <Compile Include="lib\win.cs" />
+    <Compile Include="lib\window.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="script\base\GamePage.cs" />
+    <Compile Include="script\base\Log.cs" />
+    <Compile Include="script\base\RectColor.cs" />
+    <Compile Include="script\mrfz\battlescript\令\分赃不均.cs" />
+    <Compile Include="script\mrfz\battlescript\令\落魄骑士.cs" />
+    <Compile Include="script\mrfz\battlescript\令\压轴登场.cs" />
+    <Compile Include="script\mrfz\battlescript\令\与虫相伴.cs" />
+    <Compile Include="script\mrfz\battlescript\令\巡逻队.cs" />
+    <Compile Include="script\mrfz\battlescript\令\礼炮小队.cs" />
+    <Compile Include="script\mrfz\battlescript\令\意外.cs" />
+    <Compile Include="script\mrfz\battlescript\令\驯兽小屋.cs" />
+    <Compile Include="script\mrfz\battlescript\近卫\死斗.cs" />
+    <Compile Include="script\mrfz\battlescript\近卫\与虫为伴.cs" />
+    <Compile Include="script\mrfz\battlescript\近卫\意外.cs" />
+    <Compile Include="script\mrfz\battlescript\近卫\礼炮小队.cs" />
+    <Compile Include="script\mrfz\battlescript\近卫\共通API.cs" />
+    <Compile Include="script\mrfz\battlescript\近卫\驯兽小屋.cs" />
+    <Compile Include="script\mrfz\FriendSel.cs" />
+    <Compile Include="script\mrfz\MapDeBuff.cs" />
+    <Compile Include="script\mrfz\map\map.cs" />
+    <Compile Include="script\mrfz\map\NormalMap.cs" />
+    <Compile Include="script\base\ScriptConfig.cs" />
+    <Compile Include="script\base\ScriptMachine.cs" />
+    <Compile Include="script\base\ScriptUnit.cs" />
+    <Compile Include="script\mrfz\Add_Role_Sel.cs" />
+    <Compile Include="script\mrfz\battle\BattleCharCost.cs" />
+    <Compile Include="script\mrfz\battle\BattleCharRec.cs" />
+    <Compile Include="script\mrfz\battle\BattleMap.cs" />
+    <Compile Include="script\mrfz\battle\Char_Sel_Cost.cs" />
+    <Compile Include="script\mrfz\battle\WinItem.cs" />
+    <Compile Include="script\mrfz\BranchNode.cs" />
+    <Compile Include="script\mrfz\friend_char.cs" />
+    <Compile Include="script\mrfz\ImageSave.cs" />
+    <Compile Include="script\mrfz\battle\MAP_COST.cs" />
+    <Compile Include="script\mrfz\map\PutCharMap.cs" />
+    <Compile Include="script\mrfz\map\SkillReadyMap.cs" />
+    <Compile Include="script\mrfz\map\UseSkillMap.cs" />
+    <Compile Include="script\mrfz\mrfzGamePage.cs" />
+    <Compile Include="script\mrfz\mrfz_rogue_battlemap.cs" />
+    <Compile Include="script\mrfz\mrfz_ScriptConfig.cs" />
+    <Compile Include="script\mrfz\mrfz_ScriptMachine.cs" />
+    <Compile Include="script\mrfz\mrfz_ScriptUnit.cs" />
+    <Compile Include="script\mrfz\shop\shop_gold.cs" />
+    <Compile Include="script\mrfz\shop\shop_item.cs" />
+    <Compile Include="script\mrfz\TeamLogo.cs" />
+    <Compile Include="script\保全派驻\多伦矿场\mrfz_ScriptUnit.cs" />
+    <Compile Include="script\保全派驻\通用\BaoQuanFriendSel.cs" />
+    <Compile Include="script\保全派驻\通用\Team.cs" />
+    <Compile Include="script\保全派驻\通用\TeamCharName.cs" />
+    <Compile Include="script\保全派驻\通用\TeamClassInTeamEdit.cs" />
+    <Compile Include="script\保全派驻\通用\TeamFriendChar.cs" />
+    <Compile Include="script\普通关卡挂机\equip.cs" />
+    <Compile Include="script\普通关卡挂机\mrfz_ScriptUnit.cs" />
+    <Compile Include="script\普通关卡挂机\TeamChar.cs" />
+    <Compile Include="ui\Contorls\ADB_Form_List.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ui\Contorls\ADB_Form_List.Designer.cs">
+      <DependentUpon>ADB_Form_List.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\Map\MapEditMainWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\Map\MapEditMainWin.Designer.cs">
+      <DependentUpon>MapEditMainWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\Map\UseSkillMapWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\Map\UseSkillMapWin.Designer.cs">
+      <DependentUpon>UseSkillMapWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\Map\SkillReadyMapWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\Map\SkillReadyMapWin.Designer.cs">
+      <DependentUpon>SkillReadyMapWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\Map\PutCharMapWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\Map\PutCharMapWin.Designer.cs">
+      <DependentUpon>PutCharMapWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\Map\NormalMapWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\Map\NormalMapWin.Designer.cs">
+      <DependentUpon>NormalMapWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\GamePageCreator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\GamePageCreator.Designer.cs">
+      <DependentUpon>GamePageCreator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\mrfzScriptWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\mrfzScriptWin.Designer.cs">
+      <DependentUpon>mrfzScriptWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\mrfz_config_Win.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\mrfz_config_Win.Designer.cs">
+      <DependentUpon>mrfz_config_Win.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\PictureBoxWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\PictureBoxWin.Designer.cs">
+      <DependentUpon>PictureBoxWin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\ShotCutImgsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\ShotCutImgsForm.Designer.cs">
+      <DependentUpon>ShotCutImgsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ui\TipsWin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ui\TipsWin.Designer.cs">
+      <DependentUpon>TipsWin.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ui\Contorls\ADB_Form_List.resx">
+      <DependentUpon>ADB_Form_List.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\Map\MapEditMainWin.resx">
+      <DependentUpon>MapEditMainWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\Map\UseSkillMapWin.resx">
+      <DependentUpon>UseSkillMapWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\Map\SkillReadyMapWin.resx">
+      <DependentUpon>SkillReadyMapWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\Map\PutCharMapWin.resx">
+      <DependentUpon>PutCharMapWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\Map\NormalMapWin.resx">
+      <DependentUpon>NormalMapWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\GamePageCreator.resx">
+      <DependentUpon>GamePageCreator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\mrfzScriptWin.resx">
+      <DependentUpon>mrfzScriptWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\mrfz_config_Win.resx">
+      <DependentUpon>mrfz_config_Win.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\PictureBoxWin.resx">
+      <DependentUpon>PictureBoxWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\ShotCutImgsForm.resx">
+      <DependentUpon>ShotCutImgsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ui\TipsWin.resx">
+      <DependentUpon>TipsWin.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="adb\adb.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="adb\AdbWinApi.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="adb\AdbWinUsbApi.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="index.html" />
+    <None Include="Resources\mm_facetoface_collect_qrcode_1645459404779.png" />
+    <None Include="Resources\TIPS.png" />
+    <Content Include="铃兰-_1_.ico" />
+    <Content Include="铃兰.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
